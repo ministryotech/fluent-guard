@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{639A4228-C913-4634-B58B-60A484692395}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ministry.FluentGuard", "src\Ministry.FluentGuard\Ministry.FluentGuard.csproj", "{FBE55615-09DC-4AB1-ADB7-EF5F19EE8FB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DEC4F1B4-249B-40F1-A51E-95101B8574EE}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBE55615-09DC-4AB1-ADB7-EF5F19EE8FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE55615-09DC-4AB1-ADB7-EF5F19EE8FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE55615-09DC-4AB1-ADB7-EF5F19EE8FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE55615-09DC-4AB1-ADB7-EF5F19EE8FB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FBE55615-09DC-4AB1-ADB7-EF5F19EE8FB3} = {639A4228-C913-4634-B58B-60A484692395}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5972A7D9-8D3A-451D-BCEB-D545E0AC7063}
+	EndGlobalSection
+EndGlobal
