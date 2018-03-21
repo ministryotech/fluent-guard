@@ -5,13 +5,15 @@
     <Authors>Keith Jackson, Matt Arnold</Authors>
     <Company>Minotech Ltd. (The Ministry of Technology) / Esoterix Systems Ltd.</Company>
     <Description>Parameter checking extension methods</Description>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>2018 Minotech Ltd.</Copyright>
     <RepositoryUrl>https://github.com/ministryotech/fluent-guard.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <Version>1.0.0</Version>
+    <PackageLicenseUrl>https://github.com/ministryotech/fluent-guard/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>http://www.ministryotech.co.uk/developers/open-source-projects/</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
