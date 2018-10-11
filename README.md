@@ -17,7 +17,13 @@ It is fully fluent, returning the original object, allowing methods like this...
 
     public int Increment(int? param1)
         => param1.ThrowIfNull(nameof(param1)) + 1;
-
+        
+# Available Methods
+The following fluent error checkas are available along with the exceptions they can generate (depedning on the value)...
+- **ThrowIfNull** - ArgumentNullException
+- **ThrowIfNullOrEmpty** - ArgumentNullException / ArgumentException
+- **ThrowIf** - ArgumentException
+- **ThrowOutOfRangeIf** - ArgumentOutOfRangeException
 
 ## The Ministry of Technology Open Source Products
 Welcome to The Ministry of Technology open source products. All open source Ministry of Technology products are distributed under the MIT License for maximum re-usability. Details on more of our products and services can be found on our website at http://www.ministryotech.co.uk
