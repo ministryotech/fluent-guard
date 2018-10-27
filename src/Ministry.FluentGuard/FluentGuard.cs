@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Text;
 
 // ReSharper disable once CheckNamespace
 namespace Ministry
@@ -61,6 +62,31 @@ namespace Ministry
         }
 
         /// <summary>
+        /// Throws an <see cref="ArgumentNullException"/> if the argument is null or an <see cref="ArgumentException"/> if it is empty.
+        /// </summary>
+        /// <param name="argument">The argument whose value should be checked for null.</param>
+        /// <param name="argumentName">The name of the argument on the caller's method signature.</param>
+        /// <returns>The argument which was passed in.</returns>
+        /// <remarks>
+        /// This method is a non-verbose and fluent way of throwing a standard <see cref="ArgumentNullException"/> or an <see cref="ArgumentException"/> where needed;
+        /// it should be called upon the first needed use of the given argument which should not be null.
+        /// The method can be chained prior to other calls on the argument due to its return value being that which was passed in.
+        /// </remarks>
+        /// <exception cref="ArgumentNullException">Thrown if the argumentName is null.</exception>
+        /// <exception cref="ArgumentException">Thrown if the argumentName is empty.</exception>
+        [DebuggerHidden]
+        public static StringBuilder ThrowIfNullOrEmpty(this StringBuilder argument, string argumentName)
+        {
+            if (argument == null)
+                throw new ArgumentNullException(argumentName);
+
+            if (string.IsNullOrEmpty(argument.ToString()))
+                throw new ArgumentException($"The argument {argumentName} is empty.", argumentName);
+
+            return argument;
+        }
+
+        /// <summary>
         /// Throws an <see cref="ArgumentException"/> with the provided argumentExceptionMessage if the provided argumentExceptionPredicate evaluates to true.
         /// </summary>
         /// <typeparam name="TArgument">The type of the argument to evaluate.</typeparam>
@@ -87,7 +113,6 @@ namespace Ministry
         /// <param name="argument">The argument to evaluate.</param>
         /// <param name="throwException">Whether to throw an exception or not.</param>
         /// <param name="argumentName">The name of the argument on the caller's method signature.</param>
-        /// <param name="isArgumentException">True, if the exception is to be thrown; otherwise, false.</param>
         /// <param name="argumentExceptionMessage">The argumentExceptionMessage to pass into the <see cref="ArgumentException"/> if one needs to be thrown.</param>
         /// <returns>The argument which was passed in.</returns>
         /// <remarks>

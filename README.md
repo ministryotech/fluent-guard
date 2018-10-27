@@ -42,4 +42,4 @@ You can download the package for this project from any of the following package 
 If you would like to contribute to the project, please contact me.
 
 ### Who do I talk to?
-* Keith Jackson - keith@minotech.co.uk# Introduction
+* Keith Jackson - keith@minotech.co.uk
