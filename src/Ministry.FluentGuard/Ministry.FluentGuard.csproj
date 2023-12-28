@@ -1,19 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;net40</TargetFrameworks>
-    <Authors>Keith Jackson, Matt Arnold</Authors>
-    <Company>Minotech Ltd. (The Ministry of Technology) / Esoterix Systems Ltd.</Company>
-    <Description>Parameter checking extension methods</Description>
+    <TargetFrameworks>net6.0;net8.0;netstandard2.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <RootNamespace>Ministry</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>2018 Minotech Ltd.</Copyright>
+    <LangVersion>10</LangVersion>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <Description>Parameter checking extension methods</Description>
+    <Authors>Keith Jackson, Matt Arnold</Authors>
+    <Company>Minotech Ltd. (The Ministry of Technology)</Company>
+    <Copyright>2024 Minotech Ltd.</Copyright>
     <RepositoryUrl>https://github.com/ministryotech/fluent-guard.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
-    <Version>1.0.2</Version>
-    <PackageLicenseUrl>http://www.opensource.org/licenses/MIT</PackageLicenseUrl>
-    <PackageProjectUrl>http://www.ministryotech.co.uk/developers/open-source-projects/</PackageProjectUrl>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <PackageReadMeFile>README.md</PackageReadMeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+  
+  <PropertyGroup>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <!-- TODO: Add Warnings As Errors Stuff -->
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 
 </Project>
