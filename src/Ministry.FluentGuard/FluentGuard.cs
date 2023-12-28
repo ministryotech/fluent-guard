@@ -15,7 +15,7 @@ namespace Ministry;
 [SuppressMessage("ReSharper", "MemberCanBePrivate.Global", Justification = "Library")]
 public static class FluentGuard
 {
-    private const string ArgumentExceptionMessageProducer = "argumentExceptionMessageProducer";
+    private const string ARGUMENT_EXCEPTION_MESSAGE_PRODUCER = "argumentExceptionMessageProducer";
 
     /// <summary>
     /// Throws an <see cref="ArgumentNullException"/> if the argument is null.
@@ -151,7 +151,7 @@ public static class FluentGuard
     public static TArgument ThrowIf<TArgument>(this TArgument argument, Predicate<TArgument> argumentExceptionPredicate, 
         string? argumentName, Func<string?, string?> argumentExceptionMessageProducer) 
         => ThrowIf(argument, argumentExceptionPredicate, argumentName, argumentExceptionMessageProducer
-            .ThrowIfNull(ArgumentExceptionMessageProducer)(argumentName));
+            .ThrowIfNull(ARGUMENT_EXCEPTION_MESSAGE_PRODUCER)(argumentName));
 
     /// <summary>
     /// Throws an <see cref="ArgumentException"/> with the provided argumentExceptionMessage if the provided <see cref="Boolean"/> is true.
@@ -172,7 +172,7 @@ public static class FluentGuard
         string? argumentName, Func<string?, string?> argumentExceptionMessageProducer)
     {
         return ThrowIf(argument, isArgumentException, argumentName, argumentExceptionMessageProducer
-            .ThrowIfNull(ArgumentExceptionMessageProducer)(argumentName));
+            .ThrowIfNull(ARGUMENT_EXCEPTION_MESSAGE_PRODUCER)(argumentName));
     }
 
     /// <summary>
